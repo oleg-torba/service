@@ -5,25 +5,15 @@ const Header = () => {
   return (
     <div className={styles.header}>
       <div className={styles.logo}>
-        <Link href="/">MY-SERVICE</Link>
+        <Link href="/" className={styles.logoLink}>
+          I-SERV
+        </Link>
       </div>
       <nav>
         <ul className={styles.navList}>
-          <li className={styles.navItem}>
-            <Link href="/search" className={styles.navLink}>
-              Послуги
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="/about" className={styles.navLink}>
-              Про нас
-            </Link>
-          </li>
-          <li className={styles.navItem}>
-            <Link href="/contact" className={styles.navLink}>
-              Контакти
-            </Link>
-          </li>
+          <li className={styles.navItem}>Послуги</li>
+          <li className={styles.navItem}>Про нас</li>
+          <li className={styles.navItem}>Контакти</li>
         </ul>
       </nav>
     </div>

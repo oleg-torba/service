@@ -16,6 +16,7 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 15px;
   transition: box-shadow 0.3s ease;
+  text-align: left;
 }
 
 .partItem:hover {
@@ -24,6 +25,13 @@
 
 .partsBlock {
   margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+}
+
+.partsBlock h3 {
+  margin-bottom: 10px;
 }
 
 @keyframes fadeInUp {
@@ -67,4 +75,9 @@
   opacity: 1;
   border: none;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.parts {
+  font-weight: 600;
+  margin-bottom: 5px;
 }

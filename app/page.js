@@ -1,9 +1,9 @@
-import Main from "./components/Main/Main"; // Імпортуємо Main
+import Main from "./components/Main/Main";
 
 export default function Home() {
   return (
     <div>
-      <Main /> {/* Відображаємо компонент Main для пошуку */}
+      <Main />
     </div>
   );
 }

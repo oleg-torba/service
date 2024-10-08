@@ -100,7 +100,7 @@ const CategoryList = ({ itemsArray }) => {
 
                   return (
                     <li
-                      key={item.id}
+                      key={item.id || item.vendorCode}
                       className={
                         closingItem === category
                           ? `${styles.partItem} ${styles.partItemClosing}`
@@ -116,13 +116,11 @@ const CategoryList = ({ itemsArray }) => {
                       />
                       <div className={styles.partsBlock}>
                         <h3 className={styles.partName}>{item.name}</h3>
-                        <p className={styles.partPrice}>
-                          Ціна: {finalPrice} грн
+                        <p className={styles.parts}>
+                          Ціна ремонту: {finalPrice} грн
                         </p>
-                        <p className={styles.partWarranty}>
-                          Гарантія: 1 місяць
-                        </p>
-                        <p className={styles.partWarranty}>
+                        <p className={styles.parts}>Гарантія: 1 місяць</p>
+                        <p className={styles.parts}>
                           Наявність: {item.quantity_in_stock} шт.
                         </p>
                         {item.name.toLowerCase().includes("oled") && (

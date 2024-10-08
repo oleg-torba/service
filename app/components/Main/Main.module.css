@@ -52,6 +52,7 @@
 .listItem {
   margin-bottom: 10px;
   font-size: 18px;
+  list-style-type: none;
 }
 
 .faq {
