@@ -1,0 +1,94 @@
+.main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.hero h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #555;
+}
+
+.services,
+.benefits,
+.contact,
+.faq,
+.aboutUs,
+.specialOffers {
+  margin-bottom: 40px;
+}
+
+.services h2,
+.benefits h2,
+.contact h2,
+.faq h2,
+.aboutUs h2,
+.specialOffers h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.services,
+.benefits {
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.listItem {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.faq {
+  display: flex;
+  flex-direction: column;
+}
+
+.faqItem {
+  margin-bottom: 20px;
+}
+
+.faqItem h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.faqItem p {
+  font-size: 18px;
+}
+
+.aboutUs,
+.specialOffers {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.contact {
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+}
+
+.contact p {
+  font-size: 18px;
+}
+
+.searchBlock {
+  text-align: center;
+}

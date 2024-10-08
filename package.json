@@ -9,9 +9,16 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/font": "^14.2.14",
+    "axios": "^1.7.7",
+    "bcryptjs": "^2.4.3",
+    "mongoose": "^8.6.2",
+    "next": "14.2.11",
+    "next-auth": "^4.24.7",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.11"
+    "react-toastify": "^10.0.5",
+    "xml2js": "^0.6.2"
   },
   "devDependencies": {
     "eslint": "^8",

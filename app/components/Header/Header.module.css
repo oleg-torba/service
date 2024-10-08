@@ -1,0 +1,33 @@
+/* styles/Header.module.css */
+.header {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between; /* Це вирівнює логотип і навігацію */
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navList {
+  list-style-type: none;
+  display: flex;
+}
+
+.navItem {
+  margin-left: 20px;
+}
+
+.navLink {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navLink:hover {
+  color: #ddd;
+}
