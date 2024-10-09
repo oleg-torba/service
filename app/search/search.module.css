@@ -56,7 +56,7 @@
   }
 }
 .partItemClosing {
-  animation: fadeOutDown 0.5s forwards; /* Анімація закриття */
+  animation: fadeOutDown 0.5s forwards;
 }
 
 .categoryTitle {
