@@ -15,37 +15,28 @@ const Parts = () => {
   const search = searchParams.get("query") || "";
 
   useEffect(() => {
-    if (!search) {
-      setData([]);
-      return;
-    }
-
     const fetchData = async () => {
+      if (search === "") {
+        setData([]);
+        return;
+      }
       setLoading(true);
       try {
         const res = await fetch(`/api/search?query=${search}`);
-        if (!res.ok) {
-          throw new Error("Помилка виконання запиту");
-        }
+        const resJson = await res.json();
 
-        const responseData = await res.json();
-        if (!responseData || !responseData.length) {
-          showToast(
-            "Дані не знайдені або мають неправильну структуру",
-            "error"
-          );
-          setData([]);
-          return;
-        }
-
-        const itemsArray = responseData[0].items;
+        const itemsArray = resJson[0].items;
+        console.log(itemsArray);
+        const fullArray = itemsArray.filter((data) =>
+          data.name.toLowerCase().includes(search.toLowerCase())
+        );
 
         const categoryIds = [
           52804, 5090313, 5090321, 5090210, 5090214, 5090212, 5090312, 5090213,
           5090318, 5090309, 380230, 5090311, 5090315,
         ];
 
-        const filteredArray = itemsArray
+        const filteredArray = fullArray
           .filter(
             (data) =>
               categoryIds.includes(data.categoryId) &&
@@ -54,7 +45,7 @@ const Parts = () => {
           )
           .sort((a, b) => a.name.localeCompare(b.name));
 
-        if (filteredArray.length === 0) {
+        if (fullArray.length === 0) {
           showToast(`По запиту ${search} нічого не знайдено`, "error");
           setData([]);
         } else {
@@ -91,7 +82,7 @@ const Parts = () => {
   if (loading) return <Loader />;
 
   if (error) {
-    return <p>Виникла помилка: {error.message}</p>;
+    return showToast(`Помилка: ${error}`, "error");
   }
 
   return <div>{data.length > 0 && <CategoryList itemsArray={data} />}</div>;

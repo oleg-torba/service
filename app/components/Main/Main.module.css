@@ -3,6 +3,52 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+.mainBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+}
+
+.row:first-child {
+  justify-content: space-between;
+}
+
+.row:last-child {
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Загальні стилі для секцій */
+.services,
+.benefits,
+.faq,
+.aboutUs,
+.specialOffers {
+  border: 1px solid #ccc;
+  padding: 20px;
+  flex: 1; /* Розтягує секції рівномірно */
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column; /* Вертикальне розташування на малих екранах */
+    align-items: center;
+  }
+
+  .services,
+  .benefits,
+  .faq,
+  .aboutUs,
+  .specialOffers {
+    width: 100%;
+  }
+}
 
 .hero {
   text-align: center;
@@ -19,14 +65,14 @@
   color: #555;
 }
 
-.services,
+/* .services,
 .benefits,
 .contact,
 .faq,
 .aboutUs,
 .specialOffers {
   margin-bottom: 40px;
-}
+} */
 
 .services h2,
 .benefits h2,

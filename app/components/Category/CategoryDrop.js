@@ -65,15 +65,15 @@ const CategoryList = ({ itemsArray }) => {
         const isActive = activeCategory === category;
 
         return (
-          <div key={category}>
-            <div
-              className={styles.categoryTitle}
-              onClick={() => toggleCategory(category)}
-            >
-              <h2>
-                {category} ({filteredItems.length})
-              </h2>
-            </div>
+          <div
+            key={category}
+            className={styles.categoryTitle}
+            onClick={() => toggleCategory(category)}
+          >
+            <h2>
+              {category} ({filteredItems.length})
+            </h2>
+
             {isActive && (
               <ul className={styles.itemsList}>
                 {filteredItems.map((item) => {
@@ -107,13 +107,22 @@ const CategoryList = ({ itemsArray }) => {
                           : styles.partItem
                       }
                     >
-                      <Image
-                        src={item.image}
-                        alt={item.name}
-                        width={200}
-                        height={200}
-                        className={styles.partImage}
-                      />
+                      {item.image ? (
+                        <Image
+                          src={item.image}
+                          alt={item.name}
+                          width={200}
+                          height={200}
+                          className={styles.partImage}
+                        />
+                      ) : (
+                        <Image
+                          src="https://via.placeholder.com/200?text=No+Image"
+                          alt="Default Image"
+                          width={200}
+                          height={200}
+                        />
+                      )}
                       <div className={styles.partsBlock}>
                         <h3 className={styles.partName}>{item.name}</h3>
                         <p className={styles.parts}>

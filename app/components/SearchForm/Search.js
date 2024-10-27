@@ -16,10 +16,6 @@ function Form({ onSubmit }) {
     if (search === "") {
       return onSubmit("");
     }
-
-    // const newUrl = new URL(window.location);
-    // newUrl.searchParams.set("query");
-    // router.push(newUrl.toString());
     onSubmit(search);
   };
 

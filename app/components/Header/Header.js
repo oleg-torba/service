@@ -1,13 +1,18 @@
 import Link from "next/link";
-import styles from "./header.module.css";
+import styles from "./Header.module.css";
+import Image from "next/image";
 
 const Header = () => {
   return (
     <div className={styles.header}>
       <div className={styles.logo}>
-        <Link href="/" className={styles.logoLink}>
-          I-SERV
-        </Link>
+        {/* <Link href="/" className={styles.logoLink}>
+       href='./'
+                          alt={item.name}
+                          width={200}
+                          height={200}
+                          className={styles.partImage}
+        </Link> */}
       </div>
       <nav>
         <ul className={styles.navList}>

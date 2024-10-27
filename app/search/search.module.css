@@ -13,10 +13,14 @@
   align-items: center;
   background-color: #f9f9f9;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 15px;
   transition: box-shadow 0.3s ease;
   text-align: left;
+}
+
+.partItem:last-child {
+  margin-bottom: 0;
 }
 
 .partItem:hover {
@@ -65,19 +69,29 @@
   text-align: center;
   cursor: pointer;
   opacity: 0.8;
+  padding: 5px;
   transition: opacity 0.3s;
-  margin-bottom: 10px;
-  padding: 10px 0;
-  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+  border-bottom: 1px solid lightgray;
 }
 
 .categoryTitle:hover {
   opacity: 1;
   border: none;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
 
 .parts {
   font-weight: 600;
   margin-bottom: 5px;
+}
+
+.partImage {
+  width: 100px;
+  height: 100px;
+  @media screen and (min-width: 768px) {
+    width: 200px;
+    height: 200px;
+  }
 }
